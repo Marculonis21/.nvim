@@ -3,36 +3,70 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.5',
-		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
-	use({ 
-		"ellisonleao/gruvbox.nvim",
-		as = "gruvbox",
-		config = function()
-			vim.cmd('colorscheme gruvbox')
-		end
-	})
+    use({ 
+        "ellisonleao/gruvbox.nvim",
+        as = "gruvbox",
+        config = function()
+            vim.cmd('colorscheme gruvbox')
+        end
+    })
 
-	use({ 
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
-	})
+    use({ 
+        "rose-pine/neovim",
+        as = "rose-pine",
+        config = function()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })
 
-	use(
-		"nvim-treesitter/nvim-treesitter", 
-		{run = ':TSUpdate'}
-	)
+    use(
+    "nvim-treesitter/nvim-treesitter", 
+    {run = ':TSUpdate'}
+    )
 
-	use('nvim-treesitter/playground')
-	use('tpope/vim-fugitive')
+    use('nvim-treesitter/playground')
+    use('tpope/vim-fugitive')
+
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = {
+            --- Uncomment the two plugins below if you want to manage the language servers from neovim
+            -- {'williamboman/mason.nvim'},
+            -- {'williamboman/mason-lspconfig.nvim'},
+
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'L3MON4D3/LuaSnip'},
+        }
+    }
+
+    use({
+        'alexghergh/nvim-tmux-navigation',
+        config = function()
+            require'nvim-tmux-navigation'.setup {
+                disable_when_zoomed = true, -- defaults to false
+                keybindings = {
+                    left = "<C-h>",
+                    down = "<C-j>",
+                    up = "<C-k>",
+                    right = "<C-l>",
+                    last_active = "<C-\\>",
+                    next = "<C-Space>",
+                }
+            }
+        end
+    )
 end)
