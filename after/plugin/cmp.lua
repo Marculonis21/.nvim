@@ -3,7 +3,6 @@ local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
     mapping = {
-
         -- Navigate between completion item
         ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<C-j>'] = cmp.mapping.select_next_item(),
@@ -16,6 +15,6 @@ cmp.setup({
         ['<C-n>'] = cmp_action.luasnip_jump_forward(),
 
         -- Confirm item
-        ['<C-l>'] = cmp.mapping.confirm({select = true}),
-}
+        ['<C-l>'] = cmp.mapping.confirm({ select = true }),
+    }
 })

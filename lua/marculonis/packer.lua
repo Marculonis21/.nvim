@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
         end
     })
 
+    -- use('itchyny/lightline.vim')
+
     -- use({
     --     "rose-pine/neovim",
     --     as = "rose-pine",
@@ -35,9 +37,20 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use('tpope/vim-fugitive')
     use('tpope/vim-commentary')
-    -- use('itchyny/lightline.vim')
     use('norcalli/nvim-colorizer.lua')
-    -- use('RRethy/vim-illuminate')
+    use('sheerun/vim-polyglot')
+
+    use('ixru/nvim-markdown')
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
+    -- use {
+    --   'nvim-lualine/lualine.nvim',
+    --   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    -- }
+    --
 
     use {
         'VonHeikemen/lsp-zero.nvim',
