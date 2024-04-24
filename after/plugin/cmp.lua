@@ -16,5 +16,8 @@ cmp.setup({
 
         -- Confirm item
         ['<C-l>'] = cmp.mapping.confirm({ select = true }),
-    }
+    },
+    sources = {
+        { name = 'path' },
+    },
 })

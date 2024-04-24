@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
         end
     })
 
-    -- use('itchyny/lightline.vim')
+    use('itchyny/lightline.vim')
 
     -- use({
     --     "rose-pine/neovim",
@@ -40,18 +40,26 @@ return require('packer').startup(function(use)
     use('norcalli/nvim-colorizer.lua')
     use('sheerun/vim-polyglot')
 
-    use('ixru/nvim-markdown')
+    -- use('ixru/nvim-markdown')
+    use{'preservim/vim-markdown',
+        config = function()
+            vim.g.vim_markdown_folding_disabled = 1
+        end
+    }
+
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
+
+    use('cohama/lexima.vim')
 
     -- use {
     --   'nvim-lualine/lualine.nvim',
     --   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     -- }
     --
-
+    
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -60,6 +68,7 @@ return require('packer').startup(function(use)
             {'neovim/nvim-lspconfig'},
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-path'},
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
             {'SirVer/ultisnips'},
