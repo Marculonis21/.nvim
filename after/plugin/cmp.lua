@@ -1,7 +1,12 @@
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
-cmp.setup({
+cmp.setup{
+    sources = cmp.config.sources({
+        {name = 'nvim_lsp'},
+        {name = 'path'},
+        {name = 'nvim_lsp_signature_help'},
+    }),
     mapping = {
         -- Navigate between completion item
         ['<C-k>'] = cmp.mapping.select_prev_item(),
@@ -17,7 +22,4 @@ cmp.setup({
         -- Confirm item
         ['<C-l>'] = cmp.mapping.confirm({ select = true }),
     },
-    sources = {
-        { name = 'path' },
-    },
-})
+}

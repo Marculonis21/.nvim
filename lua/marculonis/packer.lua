@@ -12,6 +12,17 @@ return require('packer').startup(function(use)
     }
 
     use({
+        'folke/todo-comments.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} },
+        opts = {
+        },
+        config = function()
+            require 'todo-comments'.setup {
+            }
+        end
+    })
+
+    use({
         "ellisonleao/gruvbox.nvim",
         as = "gruvbox",
         config = function()
@@ -70,6 +81,7 @@ return require('packer').startup(function(use)
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-path'},
             {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-nvim-lsp-signature-help'},
             {'L3MON4D3/LuaSnip'},
             {'SirVer/ultisnips'},
             {'honza/vim-snippets'},

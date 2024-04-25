@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/marculonis/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/home/marculonis/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/marculonis/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -131,7 +136,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tmux-navigation"] = {
-    config = { "\27LJ\2\nÁ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\16keybindings\1\0\6\tleft\n<C-h>\aup\n<C-k>\nright\n<C-l>\tdown\n<C-j>\tnext\14<C-Space>\16last_active\n<C-\\>\1\0\1\24disable_when_zoomed\2\nsetup\25nvim-tmux-navigation\frequire\0" },
+    config = { "\27LJ\2\nÁ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\16keybindings\1\0\6\tnext\14<C-Space>\tdown\n<C-j>\16last_active\n<C-\\>\tleft\n<C-h>\aup\n<C-k>\nright\n<C-l>\1\0\1\24disable_when_zoomed\2\nsetup\25nvim-tmux-navigation\frequire\0" },
     loaded = true,
     path = "/home/marculonis/.local/share/nvim/site/pack/packer/start/nvim-tmux-navigation",
     url = "https://github.com/alexghergh/nvim-tmux-navigation"
@@ -160,6 +165,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marculonis/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
+    loaded = true,
+    path = "/home/marculonis/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ultisnips = {
     loaded = true,
@@ -203,9 +214,13 @@ time([[Config for gruvbox]], false)
 time([[Config for vim-markdown]], true)
 try_loadstring('\27LJ\2\n?\0\0\2\0\3\0\0056\0\0\0009\0\1\0)\1\1\0=\1\2\0K\0\1\0"vim_markdown_folding_disabled\6g\bvim\0', "config", "vim-markdown")
 time([[Config for vim-markdown]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
 -- Config for: nvim-tmux-navigation
 time([[Config for nvim-tmux-navigation]], true)
-try_loadstring("\27LJ\2\nÁ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\16keybindings\1\0\6\tleft\n<C-h>\aup\n<C-k>\nright\n<C-l>\tdown\n<C-j>\tnext\14<C-Space>\16last_active\n<C-\\>\1\0\1\24disable_when_zoomed\2\nsetup\25nvim-tmux-navigation\frequire\0", "config", "nvim-tmux-navigation")
+try_loadstring("\27LJ\2\nÁ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\16keybindings\1\0\6\tnext\14<C-Space>\tdown\n<C-j>\16last_active\n<C-\\>\tleft\n<C-h>\aup\n<C-k>\nright\n<C-l>\1\0\1\24disable_when_zoomed\2\nsetup\25nvim-tmux-navigation\frequire\0", "config", "nvim-tmux-navigation")
 time([[Config for nvim-tmux-navigation]], false)
 
 _G._packer.inside_compile = false
