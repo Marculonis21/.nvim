@@ -32,17 +32,9 @@ return require('packer').startup(function(use)
 
     use('itchyny/lightline.vim')
 
-    -- use({
-    --     "rose-pine/neovim",
-    --     as = "rose-pine",
-    --     config = function()
-    --         vim.cmd('colorscheme rose-pine')
-    --     end
-    -- })
-
     use(
-    "nvim-treesitter/nvim-treesitter",
-    {run = ':TSUpdate'}
+        "nvim-treesitter/nvim-treesitter",
+        {run = ':TSUpdate'}
     )
 
     use('nvim-treesitter/playground')
@@ -65,12 +57,6 @@ return require('packer').startup(function(use)
 
     use('cohama/lexima.vim')
 
-    -- use {
-    --   'nvim-lualine/lualine.nvim',
-    --   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    -- }
-    --
-    
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -81,11 +67,15 @@ return require('packer').startup(function(use)
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-path'},
             {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lsp-signature-help'},
+            -- {'hrsh7th/cmp-nvim-lsp-signature-help'},
             {'L3MON4D3/LuaSnip'},
             {'SirVer/ultisnips'},
             {'honza/vim-snippets'},
         }
+    }
+
+    use {
+      "ray-x/lsp_signature.nvim",
     }
 
     use{
