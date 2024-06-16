@@ -13,13 +13,9 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
--- vim.opt.wrap = false
--- vim.opt.wrap = false
--- vim.opt.wrap = false
--- vim.opt.wrap = false
-
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
 
@@ -36,3 +32,4 @@ vim.g.mapleader = ","
 vim.g.lightline = {
     colorscheme = 'deus'
 }
+

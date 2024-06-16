@@ -34,3 +34,11 @@ vim.keymap.set("n", "<leader>m", "<esc>:tabnext<CR>")
 vim.keymap.set("n", "<leader>x", "<esc>:tabclose<CR>")
 
 vim.keymap.set("n", "<C-b>", "<cmd>silent !tmux-builder %:p<CR>")
+
+
+vim.api.nvim_create_autocmd('FileType', {
+        pattern = {"c", "cpp", "h", "hpp", "objc", "objcpp", "cuda", "proto" },
+        callback = function ()
+            vim.keymap.set("n", "<leader>h", "<cmd>ClangdSwitchSourceHeader<CR>")
+        end
+    })

@@ -64,13 +64,17 @@ return require('packer').startup(function(use)
             -- LSP Support
             {'neovim/nvim-lspconfig'},
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-path'},
             {'hrsh7th/cmp-nvim-lsp'},
-            -- {'hrsh7th/cmp-nvim-lsp-signature-help'},
+            {'hrsh7th/cmp-path'},
+            {'hrsh7th/cmp-nvim-lsp-signature-help'},
+            {'hrsh7th/nvim-cmp'},
             {'L3MON4D3/LuaSnip'},
+            {'saadparwaiz1/cmp_luasnip'},
             {'SirVer/ultisnips'},
-            {'honza/vim-snippets'},
+            {'quangnguyen30192/cmp-nvim-ultisnips'},
+            {'hrsh7th/vim-vsnip'},
+            {'hrsh7th/cmp-vsnip'},
+            -- {'honza/vim-snippets'},
         }
     }
 
