@@ -74,7 +74,7 @@ return require('packer').startup(function(use)
             {'quangnguyen30192/cmp-nvim-ultisnips'},
             {'hrsh7th/vim-vsnip'},
             {'hrsh7th/cmp-vsnip'},
-            -- {'honza/vim-snippets'},
+            {'honza/vim-snippets'},
         }
     }
 
