@@ -31,13 +31,14 @@ return require('packer').startup(function(use)
     })
 
     use('itchyny/lightline.vim')
+    use('godlygeek/tabular')
 
     use(
         "nvim-treesitter/nvim-treesitter",
         {run = ':TSUpdate'}
     )
 
-    use('nvim-treesitter/playground')
+    -- use('nvim-treesitter/playground')
     use('tpope/vim-fugitive')
     use('tpope/vim-commentary')
     use('norcalli/nvim-colorizer.lua')
@@ -68,7 +69,7 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-path'},
             {'hrsh7th/cmp-nvim-lsp-signature-help'},
             {'hrsh7th/nvim-cmp'},
-            {'L3MON4D3/LuaSnip'},
+            {'L3MON4D3/LuaSnip', run = "make install_jsregexp"},
             {'saadparwaiz1/cmp_luasnip'},
             {'SirVer/ultisnips'},
             {'quangnguyen30192/cmp-nvim-ultisnips'},
@@ -81,6 +82,7 @@ return require('packer').startup(function(use)
     use {
       "ray-x/lsp_signature.nvim",
     }
+
 
     use{
         'alexghergh/nvim-tmux-navigation',
