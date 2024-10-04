@@ -13,7 +13,18 @@ require('lspconfig').clangd.setup{capabilities=capabilities}
 require('lspconfig').glsl_analyzer.setup{capabilities=capabilities}
 
 require('lspconfig').pyright.setup{capabilities=capabilities}
--- require('lspconfig').lua_ls.setup{capabilities=capabilities}
+require('lspconfig').cssls.setup{}
+require('lspconfig').css_variables.setup{}
+
+require'lspconfig'.rust_analyzer.setup{
+  settings = {
+    ['rust-analyzer'] = {
+      diagnostics = {
+        enable = false;
+      }
+    }
+  }
+}
 
 local lua_ls_setup = {
     Lua = {
@@ -37,4 +48,8 @@ local lua_ls_setup = {
 }
 
 require('lspconfig').lua_ls.setup {settings=lua_ls_setup}
+
+-- require'lspconfig'.djlsp.setup{
+--     cmd = { '/home/marculonis/.local/bin/djlsp' },
+-- }
 
