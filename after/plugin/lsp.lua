@@ -16,6 +16,8 @@ require('lspconfig').pyright.setup{capabilities=capabilities}
 require('lspconfig').cssls.setup{}
 require('lspconfig').css_variables.setup{}
 
+require('lspconfig').julials.setup{}
+
 require'lspconfig'.rust_analyzer.setup{
   settings = {
     ['rust-analyzer'] = {
