@@ -13,7 +13,7 @@ require'nvim-treesitter.configs'.setup {
     "vim",
     "lua",
     "markdown",
-    "julia"
+    "julia",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
