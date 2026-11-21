@@ -41,7 +41,6 @@ return require('packer').startup(function(use)
     -- use('nvim-treesitter/playground')
     use('tpope/vim-fugitive')
     use('tpope/vim-commentary')
-    use('norcalli/nvim-colorizer.lua')
     use('sheerun/vim-polyglot')
 
     -- use('ixru/nvim-markdown')
@@ -67,7 +66,6 @@ return require('packer').startup(function(use)
             -- Autocompletion
             {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-path'},
-            {'hrsh7th/cmp-nvim-lsp-signature-help'},
             {'hrsh7th/nvim-cmp'},
             {'L3MON4D3/LuaSnip', run = "make install_jsregexp"},
             {'saadparwaiz1/cmp_luasnip'},
